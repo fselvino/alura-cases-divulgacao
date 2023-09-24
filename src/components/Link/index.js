@@ -1,9 +1,11 @@
 import NextLink from "next/link";
+import LinkEstilizado from "../LinkEstilizado";
+LinkEstilizado
 
-export default function Link({ children, href }) {
+export default function Link({ children, href, ...props}) {
   return (
     <NextLink href={href} passHref>
-      {children}
+      <LinkEstilizado {...props}>{children}</LinkEstilizado>
     </NextLink>
   )
 }
